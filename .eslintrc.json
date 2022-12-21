@@ -1,0 +1,33 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "tsconfig.json",
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint/eslint-plugin", "import"],
+  "extends": ["plugin:@typescript-eslint/recommended", "plugin:prettier/recommended", "prettier"],
+  "root": true,
+  "env": {
+    "node": true,
+    "jest": true
+  },
+  "ignorePatterns": [".eslintrc.json"],
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": "warn",
+    "@typescript-eslint/explicit-module-boundary-types": "warn",
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "comma-dangle": "off",
+    "@typescript-eslint/no-inferrable-types": "off",
+    "prettier/prettier": "warn",
+    "@typescript-eslint/no-empty-interface": "off",
+    "max-len": [
+      "warn",
+      {
+        "code": 115
+      }
+    ],
+    "@typescript-eslint/ban-types": ["error"],
+    "quotes": ["warn", "single"]
+  }
+}
